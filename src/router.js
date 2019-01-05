@@ -6,6 +6,7 @@ import Projects from './views/Projects'
 import LatestArticles from "./views/LatestArticles";
 import Read from "./views/Read";
 import Category from "./views/Category";
+import Search from "./views/Search";
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/latest',
       name: 'latest',
       component: LatestArticles,
+    },
+    {
+      path: '/search/:query',
+      name: 'search',
+      component: Search
     }
   ]
 })
