@@ -6,7 +6,7 @@
                     <div class="blue-grey darken-3 animated bounceInUp">
                         <h3 class="display-2">Добре дошли в моя личен уебсайт!</h3>
                         <h4>Може да изтеглите този уебсайт от менюто
-                            <router-link to="/projects">Проекти</router-link>
+                            <router-link :to="{name:'projects'}">Проекти</router-link>
                         </h4>
                     </div>
                 </v-flex>

@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import About from './views/About'
+import Projects from './views/Projects'
+import LatestArticles from "./views/LatestArticles";
+import Read from "./views/Read";
+import Category from "./views/Category";
 
 Vue.use(Router)
 
@@ -13,5 +18,30 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    {
+      path: '/category/:slug',
+      name: 'category',
+      component: Category,
+    },
+    {
+      path: '/about-me',
+      name: 'aboutme',
+      component: About,
+    },
+    {
+      path: '/my-projects',
+      name: 'projects',
+      component: Projects,
+    },
+    {
+      path: '/article/:slug&previous_url=:purl',
+      name: 'article',
+      component: Read
+    },
+    {
+      path: '/latest',
+      name: 'latest',
+      component: LatestArticles,
+    }
   ]
 })
