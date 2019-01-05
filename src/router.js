@@ -7,6 +7,7 @@ import LatestArticles from "./views/LatestArticles";
 import Read from "./views/Read";
 import Category from "./views/Category";
 import Search from "./views/Search";
+import NotFound from './views/NotFound';
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/search/:query',
       name: 'search',
       component: Search
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound
     }
   ]
 })
